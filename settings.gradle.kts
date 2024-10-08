@@ -21,3 +21,9 @@ dependencyResolutionManagement {
 
 rootProject.name = "Healthivity"
 include(":app")
+include(":auth")
+include(":auth:data")
+include(":auth:domain")
+include(":auth:ui")
+include(":core")
+include(":core:ui")
