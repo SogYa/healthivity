@@ -5,10 +5,25 @@ plugins {
 }
 
 android {
-    namespace = "ru.sogya.healthivity.ui"
+    namespace = "ru.sogya.healthivity.auth.ui"
+    compileSdk = 34
+
+    defaultConfig {
+        minSdk = 26
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
     buildFeatures {
         compose = true
         buildConfig = true
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_21.toString()
     }
 }
 

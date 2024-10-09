@@ -7,9 +7,24 @@ plugins {
 
 android {
     namespace = "ru.sogya.healthivity.core.ui"
+    compileSdk = 34
+
+    defaultConfig {
+        minSdk = 26
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
     buildFeatures {
         compose = true
         buildConfig = true
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_21.toString()
     }
 }
 
@@ -23,7 +38,7 @@ dependencies {
     api(libs.androidx.ui.graphics)
     api(libs.androidx.ui.tooling.preview)
     api(libs.androidx.material3)
-
+    api(libs.androidx.compose.vm)
 
     debugApi(libs.yatagan.api.dynamic)
     releaseApi(libs.yatagan.api.compiled)
