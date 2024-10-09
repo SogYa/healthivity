@@ -1,7 +1,9 @@
-package ru.sogya.healthivity.ui.enter
+package ru.sogya.healthivity.auth.ui.enter
 
 internal data class EnterState(
     val loading: Boolean = false,
+    val email: String = "",
+    val isButtonEnabled: Boolean = false
 )
 
 internal sealed class EnterEvent {
@@ -10,5 +12,6 @@ internal sealed class EnterEvent {
 }
 
 internal sealed class EnterIntent {
-    data class CheckIsUserExist(val email: String) : EnterIntent()
+    data class UpdateEmail(val email: String) : EnterIntent()
+    data object CheckIsUserExist : EnterIntent()
 }

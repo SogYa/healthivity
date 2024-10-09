@@ -1,4 +1,4 @@
-package ru.sogya.healthivity.ui
+package ru.sogya.healthivity.auth.ui
 
 import org.junit.Test
 
